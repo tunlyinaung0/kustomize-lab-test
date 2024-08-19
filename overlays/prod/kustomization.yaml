@@ -3,7 +3,7 @@ kind: Kustomization
 
 resources:
   - ../../base
-  - ./prod-ns.yaml
+  - prod-ns.yaml
 
 namespace: prod
 

@@ -3,7 +3,7 @@ kind: Kustomization
 
 resources:
   - ../../base
-  - ./dev-ns.yaml
+  - dev-ns.yaml
 
 namespace: dev
 
@@ -11,6 +11,7 @@ labels:
   - pairs:
       environement: dev
 
-
+patches:
+  - path: db-depl-patch.yaml
 
 nameSuffix: -dev

@@ -3,7 +3,6 @@ kind: Deployment
 metadata:
   name: mysql
 spec:
-  replicas: 3
   template:
     spec:
       containers:
@@ -12,6 +11,6 @@ spec:
         - name: MYSQL_ROOT_PASSWORD
           valueFrom:
             secretKeyRef:
-              name: db-secret-prod
+              name: db-secret-dev
               key: MYSQL_ROOT_PASSWORD
 
