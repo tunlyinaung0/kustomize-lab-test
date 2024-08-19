@@ -6,6 +6,7 @@
 
 ```bash
 kustomize-lab-test
+├── README.md
 ├── base
 │   ├── db
 │   │   ├── db-depl.yaml
@@ -19,6 +20,7 @@ kustomize-lab-test
 │       └── web-svc.yaml
 └── overlays
     ├── dev
+    │   ├── db-depl-patch.yaml
     │   ├── dev-ns.yaml
     │   └── kustomization.yaml
     ├── prod
@@ -27,8 +29,10 @@ kustomize-lab-test
     │   ├── prod-ns.yaml
     │   └── web-depl-patch.yaml
     └── uat
+        ├── db-depl-patch.yaml
         ├── kustomization.yaml
-        └── uat-ns.yaml
+        ├── uat-ns.yaml
+        └── web-depl-patch.yaml
 ```
 
 
