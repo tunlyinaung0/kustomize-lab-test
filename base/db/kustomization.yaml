@@ -4,3 +4,4 @@ kind: Kustomization
 resources:
   - db-depl.yaml
   - db-svc.yaml
+  - sealed-db-secret.yaml
