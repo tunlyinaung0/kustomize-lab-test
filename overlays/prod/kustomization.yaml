@@ -1,0 +1,19 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+resources:
+  - ../../base
+  - ./prod-ns.yaml
+
+namespace: prod
+
+labels:
+  - pairs:
+      environement: prod
+
+patches:
+  - path: db-depl-patch.yaml
+  - path: web-depl-patch.yaml
+
+
+nameSuffix: -prod
