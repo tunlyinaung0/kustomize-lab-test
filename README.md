@@ -31,3 +31,19 @@ kustomize-lab-test
         └── uat-ns.yaml
 ```
 
+
+## Creating cluster wide sealed secret step by step
+
+Firstly, create a database secret.
+
+```bash
+kubectl create secret generic db-secret --from-literal=MYSQL_ROOT_PASSWORD=password --dry-run=client -oyaml > db-secret.yaml
+```
+
+Encrypt the kubernetes encoded secret using kubeseal.
+
+```bash
+kubeseal --format yaml --scope cluster-wide < db-secret.yaml > sealed-db-secret.yaml
+```
+
+
