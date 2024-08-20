@@ -52,7 +52,7 @@ kubeseal --format yaml --scope cluster-wide < db-secret.yaml > sealed-db-secret.
 ```
 
 
-## What if your didn't create your sealed secret without " -- scope cluster-wide"
+## What if you didn't create your sealed secret without " -- scope cluster-wide"
 
 The answer is you will be  facing "no key could decrypt secret" error since your password can be decrypted only for default namespace.
 
