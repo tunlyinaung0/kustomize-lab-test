@@ -60,6 +60,7 @@ One of the solution that I can think of is that you can create your sealed secre
 
 Another solution is to add "--scope cluster-wide" when you seal your secrets. 
 
+<img width="1207" alt="Screenshot 2024-08-20 at 9 34 38 AM" src="https://github.com/user-attachments/assets/3f3e2022-498e-4f26-b23f-7d56ee39d6e6">
 
 
 
