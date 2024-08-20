@@ -48,6 +48,17 @@ Encrypt the kubernetes encoded secret using kubeseal.
 
 
 
+## What if your didn't create your sealed secret without " -- scope cluster-wide"
+
+The answer is you will be  facing "no key could decrypt secret" error since your password can be decrypted only for default namespace.
+
+One of the solution that I can think of is that you can create your sealed secret across multiple environments. 
+
+Another solution is to add "--scope cluster-wide" when you seal your secrets. 
+
+
+
+
 
 ## Running different environments
 
