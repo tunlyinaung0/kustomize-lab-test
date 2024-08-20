@@ -46,6 +46,29 @@ kubectl create secret generic db-secret --from-literal=MYSQL_ROOT_PASSWORD=passw
 
 Encrypt the kubernetes encoded secret using kubeseal.
 
+
+
+
+## Running different environments
+
+```bash
+cd kustomize-lab-test
+```
+
+Run for dev environment.
+
+```bash
+kustomize build overlays/dev | kubectl apply -f -
+```
+Or you can run :
+
+```bash
+kustomize build overlays/dev
+kubectl apply -k overlays/dev
+```
+
+Also the same steps for other environments. 
+
 ```bash
 kubeseal --format yaml --scope cluster-wide < db-secret.yaml > sealed-db-secret.yaml
 ```
