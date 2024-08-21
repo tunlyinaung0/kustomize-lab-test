@@ -54,7 +54,7 @@ kubeseal --format yaml --scope cluster-wide < db-secret.yaml > sealed-db-secret.
 
 ## What if you try to create your sealed secret without " -- scope cluster-wide"
 
-The answer is you will be  facing "no key could decrypt secret" error since your password can be decrypted only for default namespace.
+The answer is you will be  facing "no key could decrypt secret" error since your password can be decrypted only for namespace where you created your seal secret.
 
 One of the solution that I can think of is that you can create your sealed secret across multiple environments. 
 
